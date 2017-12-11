@@ -1,4 +1,4 @@
-gitpackage com.dima;
+package com.dima;
 
 import java.util.Scanner;
 
