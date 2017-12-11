@@ -1,4 +1,4 @@
-package com.dima;
+gitpackage com.dima;
 
 import java.util.Scanner;
 
@@ -28,7 +28,7 @@ public class MainApp {
     }else if(isHasWon('y', board)){
       System.out.println("Congratulations mister Y! You are the best player!");
     }else{
-
+      System.out.println("...Draw...");
     }
   }
 
@@ -147,7 +147,11 @@ public class MainApp {
   private static void showField(char[][] field) {
     for (int i = 0; i < field.length; i++) {
       for (int j = 0; j < field[i].length; j++){
-        System.out.print(" "+ field[i][j] + " ");
+        if (field[i][j] != ' ') {
+          System.out.print(" "+ field[i][j] + " ");
+        }else {
+          System.out.print(i + " " + j);
+        }
         if (j >= 0 && j < 2) {
           System.out.print("|");
         }
