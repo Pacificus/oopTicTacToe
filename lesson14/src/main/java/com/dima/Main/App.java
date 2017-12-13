@@ -6,29 +6,13 @@ package com.dima.Main;
 public class App {
 
   public static void main(String[] args) {
+    Player player1 = new Player("John", 'x');
+    Player player2 = new Player("Sam", '0');
 
-    char[][] field = new char[3][3];
-    char currentPlayer = 'x';
-    fillBoard(field);
-
-//    while (!gameFinished()) {
-//
-//      String coords;
-//      do {
-//        coords = inputCoodinates();
-//      }
-//      while (!validateCoodinates(coords));
-//      makeMove(field, coords, currentPlayer);
-//      currentPlayer = switchCurrentPlayer(currentPlayer);
-//    }
-//
-//    calculateWinner();
-//  }
+    Game game = new Game(player1, player2);
+    String result = game.gameResult();
+    System.out.println(result);
+  }
 }
 
-  private static void fillBoard(char[][] field) {
 
-  }
-
-
-  }
